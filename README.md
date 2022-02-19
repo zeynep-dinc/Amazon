@@ -2,23 +2,33 @@
 
 
 ## Kullanılan Dil ve Teknolojiler Temel
-<ul>
-<li> JAVA </li> 
-<li> MAVEN </li>
-<ol>
-<li>Selenium</li>
-<li>Cucumber</li>
-<li>TestNG</li>
-<li>Lombok</li>
-</ol>
-</ul>
+Proje "JAVA" dilinde yazılmış olup, proje yönetim safhası için "MAVEN" aracından yardım alınmıştır. Test gelişiminde "davranış güdümlü test" modeli kullanılmıştır. Bu hususta da "cucumber" kullanılmıştır.  
 
 
-## Senaryo
-1. Go to 'https://www.amazon.com.tr/'
-2. Search iPhone13 512
-3. Check that the results are listed
-4. Click iPhone13 at the top of the list
-5. Log the following values for each size
-.Size information .Price .Color .Stock status
+Projeyi çalıştırmak ve senaryoyu okumak için:
+src/test/java/features/AmazonUrunArama.feature
 
+Hooks ve StepDefs classları için:
+src/test/java/steps
+
+Testte kullanılan elementler ve step fonksiyonlarının detayları için:
+src/main/java/amazon/Amazon.java
+
+Temel fonksiyonlar için:
+src/main/java/base/BaseEventClass.java
+
+Tarayıcı olarak <u> Windows </u> işetim sistemi için <u> Chrome </u> driver <u> versiyon 98 </u> tercih edilmiştir.
+
+Driver bilgilerini okumak/güncellemek için:
+src/main/resources/config.properties
+
+Tarayıcının kodda belirtilen konumu:
+src/main/resources/drivers
+
+## Senaryo 
+1. sayfa basliginin içinde "Amazon.com.tr" oldugunu dogrula
+2. cerezler alaninin acilip acilmadigini kontrol et
+3. "iphone 13 512" urununu arat
+4. sayfa basliginin içinde "Amazon.com.tr : iphone 13 512" oldugunu dogrula
+5. ilk urunu sec
+6. urunun bilgilerini yazdir
